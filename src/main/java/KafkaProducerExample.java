@@ -53,7 +53,11 @@ public class KafkaProducerExample {
         remainConstantFor1Min();*/
 
         //OldWorkload.startWorkload();
-        IncreaseDecreaseLinearly.startWorkload();
+
+        TraceProducerPerSec.startWorkload();
+
+
+       // IncreaseDecreaseLinearly.startWorkload();
 
 
         //twentyFiveEventsPerSecForThreeMinute();
