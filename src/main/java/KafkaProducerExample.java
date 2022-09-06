@@ -54,10 +54,12 @@ public class KafkaProducerExample {
 
         //OldWorkload.startWorkload();
 
-        TraceProducerPerSec.startWorkload();
+        //TraceProducerPerSec.startWorkload();
+        TraceProducerPerSecSkewed.startWorkload();
 
 
-       // IncreaseDecreaseLinearly.startWorkload();
+
+        // IncreaseDecreaseLinearly.startWorkload();
 
 
         //twentyFiveEventsPerSecForThreeMinute();

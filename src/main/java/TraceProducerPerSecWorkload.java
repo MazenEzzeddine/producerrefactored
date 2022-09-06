@@ -31,7 +31,8 @@ public class TraceProducerPerSecWorkload {
     }
     private void loadWorkload() throws IOException, URISyntaxException {
         ClassLoader CLDR = this.getClass().getClassLoader();
-        InputStream inputStream = CLDR.getResourceAsStream("the1.csv");
+        //InputStream inputStream = CLDR.getResourceAsStream("the1.csv");
+        InputStream inputStream = CLDR.getResourceAsStream("2h.csv");
         List<String> out = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
             String line;
