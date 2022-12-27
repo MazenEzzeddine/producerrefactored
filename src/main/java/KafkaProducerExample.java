@@ -52,7 +52,11 @@ public class KafkaProducerExample {
        /* increaseExponentially();
         remainConstantFor1Min();*/
 
-        //OldWorkload.startWorkload();
+       // OldWorkload.startWorkload();
+        //ConstantPerSec.startWorkload2();
+        //SimplerWorkload.startWorkload4();
+
+       // TenPerSec.startWorkload();
 
         //TraceProducerPerSec.startWorkload();
         TraceProducerPerSecSkewed.startWorkload();

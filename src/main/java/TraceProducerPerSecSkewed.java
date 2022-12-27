@@ -14,7 +14,8 @@ public class TraceProducerPerSecSkewed {
 
         final Logger log = LogManager.getLogger(KafkaProducerExample.class);
 
-        TraceProducerPerSecWorkload wrld = new TraceProducerPerSecWorkload();
+        //TraceProducerPerSecWorkload wrld = new TraceProducerPerSecWorkload();
+        Workload wrld = new Workload();
 
         Random rnd = new Random();
         // over all the workload
@@ -23,9 +24,9 @@ public class TraceProducerPerSecSkewed {
                     Math.ceil(wrld.getDatay().get(i)));
             //   loop over each sample
             Customer custm = new Customer(rnd.nextInt(), UUID.randomUUID().toString());
-            int p0 = (int) (0.27 * Math.ceil(wrld.getDatay().get(i)));
-            int p1 = (int) (0.27 * Math.ceil(wrld.getDatay().get(i)));
-            int others = (int) (0.153 * Math.ceil(wrld.getDatay().get(i)));
+            int p0 = (int) (0.25 * Math.ceil(wrld.getDatay().get(i)));
+            int p1 = (int) (0.25 * Math.ceil(wrld.getDatay().get(i)));
+            int others = (int) (0.166 * Math.ceil(wrld.getDatay().get(i)));
 
             log.info("Sending {} to P0 and P1  and {} to each of the others", p0, others);
 

@@ -32,8 +32,6 @@ public class IncreaseDecreaseLinearly {
         remainConstantFor1min();
         decreaseLinearlyFor1Min();
         remainConstantFor1min();
-
-
     }
 
     private static void TenFor1min() throws InterruptedException {

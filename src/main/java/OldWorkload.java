@@ -35,7 +35,7 @@ public class OldWorkload {
 
             log.info("sent {} events Per Second ", Math.ceil(wrld.getDatay().get(i)));
 
-           // Thread.sleep(KafkaProducerExample.config.getDelay());
+            Thread.sleep(KafkaProducerExample.config.getDelay());
         }
     }
 
