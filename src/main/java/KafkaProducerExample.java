@@ -40,7 +40,7 @@ public class KafkaProducerExample {
        // fiveEpsToeachPartitonForFiveSeconds();
         //P1P216EPSOthers5EPSFor1min();
 
-        //tenEventsPerSecForThreeMinute();
+        tenEventsPerSecForThreeMinute();
 
 
         //sleep for one 1 minute to avoid start sending during rebalancing
@@ -59,7 +59,7 @@ public class KafkaProducerExample {
        // TenPerSec.startWorkload();
 
         //TraceProducerPerSec.startWorkload();
-        TraceProducerPerSecSkewed.startWorkload();
+        //TraceProducerPerSecSkewed.startWorkload();
 
 
 
@@ -88,10 +88,10 @@ public class KafkaProducerExample {
     }
 
     static void tenEventsPerSecForThreeMinute() throws InterruptedException {
-        eventsPerSeconds = 10;
+        eventsPerSeconds = 300;
         Instant start = now();
         Instant end = now();
-        while (Duration.between(start, end).toMinutes() <= 2) {
+        while (Duration.between(start, end).toMinutes() <= 10) {
             for (int j = 0; j < eventsPerSeconds; j++) {
                 Customer custm = new Customer(rnd.nextInt(), UUID.randomUUID().toString());
                 producer.send(new ProducerRecord<String, Customer>(config.getTopic(),

@@ -34,7 +34,7 @@ public class KafkaProducerConfig {
     public static KafkaProducerConfig fromEnv() {
         String bootstrapServers = System.getenv("BOOTSTRAP_SERVERS");
         String topic = System.getenv("TOPIC");
-        int delay = Integer.valueOf(System.getenv("DELAY_MS"));
+        int delay = Integer.valueOf(System.getenv("DELAY_MS") == null ? "1" : System.getenv("DELAY_MS"));
         Long messageCount = System.getenv("MESSAGE_COUNT") == null ?
                 DEFAULT_MESSAGES_COUNT : Long.valueOf(System.getenv("MESSAGE_COUNT"));
         String message = System.getenv("MESSAGE") == null ? DEFAULT_MESSAGE :
